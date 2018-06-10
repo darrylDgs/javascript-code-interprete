@@ -1,0 +1,17 @@
+{
+  "name": "javascript-code-interprete",
+  "version": "1.0.0",
+  "description": "Basic code interpreter",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Darryl",
+  "license": "ISC"
+}
