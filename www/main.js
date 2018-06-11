@@ -28,16 +28,24 @@ const rules = {
                 isUnique: true
             }
         }
-    }
+    },
+    consoleContainer: null,
+    console: consoleController
 }
 
 function compile() {
-    var code = document.getElementById("codeInput").value;
-    interprete(code);
-    log(scope);
+    if(document){
+        var code = document.getElementById("codeInput").value;
+        var consola = document.getElementById("consola");
+        //initialize console Container
+        rules.consoleContainer = consola;
+        interprete(code, consola);
+    }
 }
 
-function interprete(code) {
+function interprete(code, consola) {
+    rules.console("dygffdyf","error");
+
     //separate code in lines
     var lines = code.split(rules.closeLine);
     var lineNum = 1;
@@ -57,6 +65,21 @@ function interprete(code) {
         }
         lineNum++;
     });
+}
+
+//control all
+function consoleController(msg, msgType){
+    let color = (msgType === "normal")? "black":
+                (msgType === "alert")? "yellow":
+                (msgType === "error")? "red":
+                consoleController("Error msg type:" + msgType + "not defined", error);
+    
+    let element = document.createElement("P");
+    element.style.color = color;
+    let text = msg;
+    let textNode = document.createTextNode(text);
+    element.appendChild(textNode);
+    rules.consoleContainer.appendChild(element);
 }
 
 //return true if the property meet all conditions for line
