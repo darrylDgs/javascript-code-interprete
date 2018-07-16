@@ -12,5 +12,7 @@ app.use(express.static(publicPath));
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/www/index.html');
+    
 });
 app.listen(8080);
+

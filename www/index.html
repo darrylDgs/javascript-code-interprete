@@ -1,44 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Code interprete</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="actionFunctions\declareVars.js"></script>
+    <script src="actionFunctions\initializeVars.js"></script>
+    <script src="actionFunctions\print.js"></script>
+    <script src="consoleController.js"></script>
+    <script src="rules.js"></script>
+    <script src="interprete.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    
+
 </head>
+
 <body>
     <div id="interprete">
-        <button onclick="compile()">Run</button>
         <div class="codeEditor">
-            <textarea id="codeInput" cols="30" rows="10" value="svar">
-svar a;
-a = 44;
-svar b;
-b = 31; 
-svar c = 2 + 2;  
-svar d = 3+3;
-svar str;
-str = "hello" + a;
-print a + b;
-print "hello";
-            </textarea>
-           
+            <textarea id="codeInput" cols="30" rows="10" value="svar"></textarea>
         </div>
-        <div id="consola">
-
+        <div class="buttonBox">
+            <button onclick="compile()">Run</button>
+            <button onclick="clearEditor()">Clear</button>
+            <button onclick="setExaple()">Show Example</button>    
         </div>
-
+        <div id="consola"></div>
     </div>
 </body>
+
 </html>
-<!-- svar a;
-a = 44;
-svar b;
-b = 31;
-svar str;
-str = "hello";
-print str;
-print a + b;-->

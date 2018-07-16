@@ -5,12 +5,12 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.16.3",
-    "fs": "^0.0.1-security"
+    "puer": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {
     "prestart": "npm install",
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Darryl",
